@@ -7,345 +7,80 @@
 <meta name="theme-color" content="#123d32">
 <meta name="description" content="Undangan doa bersama 100 hari wafatnya Almarhumah Ratna Thalib.">
 <title>Undangan 100 Hari — Ratna Thalib</title>
-
 <style>
-:root{
-  --green:#123d32;
-  --green2:#1b5142;
-  --gold:#c8a96a;
-  --cream:#fbf7ed;
-  --ink:#243b32;
-  --muted:#69776d;
-  --line:#e7dcc4;
-}
+:root{--green:#123d32;--green2:#1b5142;--gold:#c8a96a;--cream:#fbf7ed;--ink:#243b32;--muted:#69776d;--line:#e7dcc4}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:var(--cream);
-  color:var(--ink);
-  font-family:Georgia,'Times New Roman',serif;
-  line-height:1.7;
-}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.7}
+body.cover-open{overflow:hidden}
 button,a{font:inherit}
-.hero{
-  min-height:100svh;
-  background:radial-gradient(ellipse at 50% 0%,#285d4b 0%,var(--green) 62%);
-  color:#fff8e9;
-  display:grid;
-  place-items:center;
-  padding:28px 18px;
-  position:relative;
-  overflow:hidden;
-  text-align:center;
-}
-.hero:before,.hero:after{
-  content:"❋";
-  position:absolute;
-  color:rgba(200,169,106,.2);
-  font-size:clamp(180px,40vw,420px);
-  line-height:1;
-  pointer-events:none;
-}
-.hero:before{
-  top:-65px;
-  left:-95px;
-  transform:rotate(-20deg);
-}
-.hero:after{
-  bottom:-105px;
-  right:-95px;
-  transform:rotate(25deg);
-}
-.hero-inner{
-  width:min(100%,720px);
-  position:relative;
-  z-index:1;
-  border:1px solid rgba(200,169,106,.65);
-  padding:clamp(28px,7vw,64px) clamp(20px,6vw,56px);
-  outline:1px solid rgba(200,169,106,.2);
-  outline-offset:8px;
-}
-.bismillah{
-  font-size:clamp(26px,6vw,40px);
-  color:#e4cb91;
-  margin:0 0 14px;
-  line-height:1.6;
-}
-.eyebrow{
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  font:11px/1.8 Arial,sans-serif;
-  color:#e4cb91;
-}
-.hero h1{
-  font-size:clamp(34px,8vw,65px);
-  line-height:1.1;
-  font-weight:normal;
-  margin:14px 0;
-  color:#fff9ed;
-}
-.hero .sub{
-  font-size:clamp(16px,3.8vw,21px);
-  color:#f2e8d1;
-  margin:0 auto 22px;
-  max-width:500px;
-}
-.ornament{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-  color:var(--gold);
-  margin:22px auto;
-}
-.ornament:before,.ornament:after{
-  content:"";
-  height:1px;
-  width:66px;
-  background:var(--gold);
-  opacity:.8;
-}
-.pill{
-  display:inline-block;
-  border:1px solid var(--gold);
-  border-radius:99px;
-  padding:8px 18px;
-  color:#f5e8c8;
-  font:12px Arial,sans-serif;
-  letter-spacing:.08em;
-}
-.scroll-note{
-  margin-top:26px;
-  font:11px Arial,sans-serif;
-  letter-spacing:.15em;
-  color:#d7c9a8;
-  text-transform:uppercase;
-}
+.hero{min-height:100svh;background:radial-gradient(ellipse at 50% 0%,#285d4b 0%,var(--green) 62%);color:#fff8e9;display:grid;place-items:center;padding:28px 18px;position:relative;overflow:hidden;text-align:center}
+.hero:before,.hero:after{content:"❋";position:absolute;color:rgba(200,169,106,.2);font-size:clamp(180px,40vw,420px);line-height:1;pointer-events:none}
+.hero:before{top:-65px;left:-95px;transform:rotate(-20deg)}
+.hero:after{bottom:-105px;right:-95px;transform:rotate(25deg)}
+.hero-inner{width:min(100%,720px);position:relative;z-index:1;border:1px solid rgba(200,169,106,.65);padding:clamp(28px,7vw,64px) clamp(20px,6vw,56px);outline:1px solid rgba(200,169,106,.2);outline-offset:8px}
+.bismillah{font-size:clamp(26px,6vw,40px);color:#e4cb91;margin:0 0 14px;line-height:1.6}
+.eyebrow{letter-spacing:.22em;text-transform:uppercase;font:11px/1.8 Arial,sans-serif;color:#e4cb91}
+.hero h1{font-size:clamp(34px,8vw,65px);line-height:1.1;font-weight:normal;margin:14px 0;color:#fff9ed}
+.hero .sub{font-size:clamp(16px,3.8vw,21px);color:#f2e8d1;margin:0 auto 22px;max-width:500px}
+.ornament{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--gold);margin:22px auto}
+.ornament:before,.ornament:after{content:"";height:1px;width:66px;background:var(--gold);opacity:.8}
+.pill{display:inline-block;border:1px solid var(--gold);border-radius:99px;padding:8px 18px;color:#f5e8c8;font:12px Arial,sans-serif;letter-spacing:.08em}
+.scroll-note{margin-top:26px;font:11px Arial,sans-serif;letter-spacing:.15em;color:#d7c9a8;text-transform:uppercase}
 .section{padding:68px 18px}
 .wrap{width:min(100%,760px);margin:auto}
-.section h2{
-  font-weight:normal;
-  font-size:clamp(27px,6vw,38px);
-  line-height:1.25;
-  text-align:center;
-  color:var(--green);
-  margin:0 0 18px;
-}
-.lead{
-  text-align:center;
-  color:var(--muted);
-  max-width:590px;
-  margin:0 auto 28px;
-}
-.card{
-  background:#fffdf8;
-  border:1px solid var(--line);
-  padding:clamp(22px,5vw,38px);
-  box-shadow:0 14px 38px rgba(25,55,42,.05);
-}
-.quote{
-  text-align:center;
-  font-size:19px;
-  font-style:italic;
-  color:#496454;
-  margin:0;
-}
-.name{
-  text-align:center;
-  font-size:clamp(27px,6vw,39px);
-  color:var(--green);
-  margin:12px 0 4px;
-}
-.smallcaps{
-  text-align:center;
-  font:11px Arial,sans-serif;
-  letter-spacing:.16em;
-  color:#9a7b40;
-  text-transform:uppercase;
-}
-.dua{
-  margin:24px auto 0;
-  text-align:center;
-  color:#58675d;
-  max-width:560px;
-}
-.event-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
-  margin-top:28px;
-}
-.event-item{
-  background:#fffdf8;
-  border:1px solid var(--line);
-  padding:20px 16px;
-  text-align:center;
-}
+.section h2{font-weight:normal;font-size:clamp(27px,6vw,38px);line-height:1.25;text-align:center;color:var(--green);margin:0 0 18px}
+.lead{text-align:center;color:var(--muted);max-width:590px;margin:0 auto 28px}
+.card{background:#fffdf8;border:1px solid var(--line);padding:clamp(22px,5vw,38px);box-shadow:0 14px 38px rgba(25,55,42,.05)}
+.quote{text-align:center;font-size:19px;font-style:italic;color:#496454;margin:0}
+.name{text-align:center;font-size:clamp(27px,6vw,39px);color:var(--green);margin:12px 0 4px}
+.smallcaps{text-align:center;font:11px Arial,sans-serif;letter-spacing:.16em;color:#9a7b40;text-transform:uppercase}
+.dua{margin:24px auto 0;text-align:center;color:#58675d;max-width:560px}
+.event-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.event-item{background:#fffdf8;border:1px solid var(--line);padding:20px 16px;text-align:center}
 .event-item .symbol{font-size:23px;color:#a4864d}
-.event-item h3{
-  font:11px Arial,sans-serif;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  color:#8b7447;
-  margin:8px 0;
-}
-.event-item p{
-  margin:0;
-  color:var(--green);
-  font-size:16px;
-  overflow-wrap:anywhere;
-}
-.actions{
-  display:flex;
-  gap:12px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-top:26px;
-}
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  min-height:48px;
-  padding:12px 20px;
-  text-decoration:none;
-  border:1px solid var(--green);
-  background:var(--green);
-  color:#fff9ed;
-  cursor:pointer;
-  transition:transform .15s,background .15s;
-}
-.btn:hover{
-  background:var(--green2);
-  transform:translateY(-1px);
-}
-.btn.secondary{
-  background:transparent;
-  color:var(--green);
-}
+.event-item h3{font:11px Arial,sans-serif;text-transform:uppercase;letter-spacing:.16em;color:#8b7447;margin:8px 0}
+.event-item p{margin:0;color:var(--green);font-size:16px;overflow-wrap:anywhere}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 20px;text-decoration:none;border:1px solid var(--green);background:var(--green);color:#fff9ed;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{background:var(--green2);transform:translateY(-1px)}
+.btn.secondary{background:transparent;color:var(--green)}
 .btn.secondary:hover{background:#f0e8d7}
-.notice{
-  text-align:center;
-  color:var(--muted);
-  font-size:13px;
-  margin-top:16px;
-}
-.footer{
-  background:var(--green);
-  color:#e9dfc7;
-  text-align:center;
-  padding:34px 18px;
-}
+.notice{text-align:center;color:var(--muted);font-size:13px;margin-top:16px}
+.footer{background:var(--green);color:#e9dfc7;text-align:center;padding:34px 18px}
 .footer .arabic{color:var(--gold);font-size:25px}
 .footer p{margin:5px 0}
-.footer small{
-  display:block;
-  margin-top:20px;
-  color:#c6c7b5;
-  font:11px Arial,sans-serif;
-  letter-spacing:.04em;
-}
-.countdown{
-  font:14px Arial,sans-serif;
-  letter-spacing:.03em;
-  color:#f3e7cb;
-  margin-top:18px;
-}
-.house-photo{
-  display:block;
-  width:100%;
-  height:auto;
-  max-height:460px;
-  object-fit:contain;
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:12px;
-  box-shadow:0 10px 30px rgba(25,55,42,.08);
-}
-.music-card{
-  margin:28px auto 0;
-  max-width:640px;
-}
-.video-frame{
-  position:relative;
-  width:100%;
-  aspect-ratio:16/9;
-  overflow:hidden;
-  border-radius:8px;
-  background:#123d32;
-}
-.video-frame iframe{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  border:0;
-}
-.message-form{
-  display:grid;
-  gap:14px;
-  margin-top:22px;
-}
-.field-label{
-  display:block;
-  font:12px Arial,sans-serif;
-  letter-spacing:.04em;
-  color:#53675a;
-  margin-bottom:6px;
-}
-.field-input,.field-textarea{
-  display:block;
-  width:100%;
-  border:1px solid #d9cfb9;
-  border-radius:2px;
-  background:#fffefb;
-  padding:13px 14px;
-  font:16px/1.5 Arial,sans-serif;
-  color:var(--ink);
-}
-.field-input:focus,.field-textarea:focus{
-  outline:2px solid #c8a96a;
-  outline-offset:1px;
-}
+.footer small{display:block;margin-top:20px;color:#c6c7b5;font:11px Arial,sans-serif;letter-spacing:.04em}
+.countdown{font:14px Arial,sans-serif;letter-spacing:.03em;color:#f3e7cb;margin-top:18px}
+.house-photo{display:block;width:100%;height:auto;max-height:460px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(25,55,42,.08)}
+.music-card{margin:28px auto 0;max-width:640px}
+.video-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:8px;background:#123d32}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.message-form{display:grid;gap:14px;margin-top:22px}
+.field-label{display:block;font:12px Arial,sans-serif;letter-spacing:.04em;color:#53675a;margin-bottom:6px}
+.field-input,.field-textarea{display:block;width:100%;border:1px solid #d9cfb9;border-radius:2px;background:#fffefb;padding:13px 14px;font:16px/1.5 Arial,sans-serif;color:var(--ink)}
+.field-input:focus,.field-textarea:focus{outline:2px solid #c8a96a;outline-offset:1px}
 .field-textarea{min-height:120px;resize:vertical}
-.message-list{
-  display:grid;
-  gap:12px;
-  margin-top:24px;
-}
-.message-item{
-  background:#fffdf8;
-  border:1px solid var(--line);
-  padding:18px 20px;
-  overflow-wrap:anywhere;
-}
-.message-item h3{
-  font:13px Arial,sans-serif;
-  color:var(--green);
-  margin:0 0 8px;
-}
+.message-list{display:grid;gap:12px;margin-top:24px}
+.message-item{background:#fffdf8;border:1px solid var(--line);padding:18px 20px;overflow-wrap:anywhere}
+.message-item h3{font:13px Arial,sans-serif;color:var(--green);margin:0 0 8px}
 .message-item p{margin:0;white-space:pre-wrap}
-.message-date{
-  display:block;
-  margin-top:10px;
-  color:var(--muted);
-  font:11px Arial,sans-serif;
-}
-.form-status{
-  font:13px/1.5 Arial,sans-serif;
-  color:var(--muted);
-  margin:0;
-}
-.honeypot{
-  position:absolute;
-  left:-10000px;
-  width:1px;
-  height:1px;
-  overflow:hidden;
-}
+.message-date{display:block;margin-top:10px;color:var(--muted);font:11px Arial,sans-serif}
+.form-status{font:13px/1.5 Arial,sans-serif;color:var(--muted);margin:0}
+.honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 button:disabled{opacity:.6;cursor:not-allowed}
+
+/* Halaman pembuka undangan */
+.invitation-cover{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow-y:auto;padding:24px;background:radial-gradient(ellipse at 50% 0%,#285d4b 0%,#123d32 72%);color:#fff8e9;text-align:center}
+.invitation-cover.is-hidden{display:none}
+.cover-inner{width:min(100%,560px);border:1px solid rgba(200,169,106,.7);padding:clamp(28px,7vw,54px) clamp(20px,6vw,42px);outline:1px solid rgba(200,169,106,.2);outline-offset:7px}
+.cover-inner .cover-arabic{font-size:clamp(27px,6vw,38px);color:#e4cb91;margin:0 0 16px}
+.cover-inner h1{font-size:clamp(32px,7vw,49px);font-weight:normal;line-height:1.15;color:#fff9ed;margin:12px 0}
+.cover-inner .cover-text{color:#f2e8d1;margin:12px auto 22px;max-width:440px}
+.open-btn{margin-top:22px;min-width:210px;border-color:var(--gold);background:#c8a96a;color:#163d32;font-weight:bold}
+.open-btn:hover{background:#e4cb91;color:#123d32}
+.cover-note{font:12px/1.6 Arial,sans-serif;color:#dfd2b6;margin:18px 0 0}
+
 @media(max-width:520px){
   .event-grid{grid-template-columns:1fr}
   .hero-inner{padding:30px 20px}
@@ -360,7 +95,22 @@ button:disabled{opacity:.6;cursor:not-allowed}
 </style>
 </head>
 
-<body>
+<body class="cover-open">
+
+<!-- HALAMAN PEMBUKA: MUSIK DICOBA DIPUTAR SAAT TOMBOL DITEKAN -->
+<div class="invitation-cover" id="invitationCover">
+  <div class="cover-inner">
+    <p class="cover-arabic" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+    <p class="eyebrow">Undangan Doa Bersama</p>
+    <div class="ornament">✦</div>
+    <p class="cover-text">Mengenang 100 Hari Wafatnya</p>
+    <h1>Almarhumah<br>Ratna Thalib</h1>
+    <p class="cover-text">Sabtu, 17 Oktober 2026<br>Selesai Maghrib</p>
+    <button class="btn open-btn" id="openInvitationBtn" type="button">💌 Buka Undangan</button>
+    <p class="cover-note">Tekan untuk membuka undangan dan mencoba memutar musik pengiring.</p>
+  </div>
+</div>
+
 <header class="hero" id="atas">
   <div class="hero-inner">
     <p class="bismillah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
@@ -380,7 +130,6 @@ button:disabled{opacity:.6;cursor:not-allowed}
     <div class="wrap">
       <h2>Assalamu’alaikum warahmatullahi wabarakatuh</h2>
       <p class="lead">Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud mengadakan doa bersama dan tahlil untuk mengenang 100 hari wafatnya:</p>
-
       <div class="card">
         <p class="quote">“Setiap doa yang tulus menjadi pengingat akan kasih sayang yang tetap hidup dalam kenangan.”</p>
         <div class="ornament">❋</div>
@@ -414,48 +163,31 @@ button:disabled{opacity:.6;cursor:not-allowed}
         </div>
       </div>
 
-      <!-- FOTO RUMAH SEBAGAI PATOKAN -->
       <div style="margin:28px auto 20px;max-width:680px">
-        <h3 style="text-align:center;color:#294b39;font-weight:normal;font-size:22px;margin:0 0 12px">
-          📍 Patokan Lokasi Acara
-        </h3>
-        <img
-          class="house-photo"
-          src="./IMG_7031.jpg"
-          alt="Foto rumah sebagai patokan lokasi acara"
-          loading="lazy"
-        >
+        <h3 style="text-align:center;color:#294b39;font-weight:normal;font-size:22px;margin:0 0 12px">📍 Patokan Lokasi Acara</h3>
+        <img class="house-photo" src="./IMG_7031.jpg" alt="Foto rumah sebagai patokan lokasi acara" loading="lazy">
         <p class="notice">Perhatikan foto rumah ini agar lebih mudah menemukan lokasi acara.</p>
       </div>
 
       <div class="actions">
-        <a class="btn"
-           href="https://maps.app.goo.gl/zXQm5Xz3GF5SaJ1G8?g_st=ic"
-           target="_blank"
-           rel="noopener noreferrer">⌖ &nbsp; Buka Google Maps</a>
+        <a class="btn" href="https://maps.app.goo.gl/zXQm5Xz3GF5SaJ1G8?g_st=ic" target="_blank" rel="noopener noreferrer">⌖ &nbsp; Buka Google Maps</a>
       </div>
 
-      <!-- LAGU RESMI GALA BUNGA MATAHARI -->
       <div class="card music-card">
-        <h3 style="text-align:center;color:#123d32;font-weight:normal;font-size:22px;margin:0 0 8px">
-          🌻 Musik Pengiring
-        </h3>
-        <p style="text-align:center;color:#69776d;margin:0 0 20px">
-          Gala Bunga Matahari · Sal Priadi
-        </p>
+        <h3 style="text-align:center;color:#123d32;font-weight:normal;font-size:22px;margin:0 0 8px">🌻 Musik Pengiring</h3>
+        <p style="text-align:center;color:#69776d;margin:0 0 20px">Gala Bunga Matahari · Sal Priadi</p>
 
         <div class="video-frame">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/AQpEIZ8dNcU?rel=0"
+            id="songPlayer"
+            src="about:blank"
             title="Sal Priadi - Gala Bunga Matahari (Official Music Video)"
-            loading="lazy"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="autoplay; encrypted-media; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen>
           </iframe>
         </div>
-
-        <p class="notice">Tekan tombol putar pada video untuk mendengarkan lagu sambil mengenang almarhumah.</p>
+        <p class="notice" id="musicStatus">Tekan “Buka Undangan” di halaman awal untuk mencoba memulai musik. Jika tidak terdengar, tekan Play di pemutar ini.</p>
       </div>
 
       <p class="notice">Jika titik peta kurang tepat, silakan hubungi keluarga untuk petunjuk lokasi.</p>
@@ -473,17 +205,14 @@ button:disabled{opacity:.6;cursor:not-allowed}
             <label class="field-label" for="senderName">Nama pengirim</label>
             <input class="field-input" id="senderName" name="senderName" maxlength="60" autocomplete="name" placeholder="Nama kamu" required>
           </div>
-
           <div>
             <label class="field-label" for="messageText">Pesan dan doa</label>
             <textarea class="field-textarea" id="messageText" name="messageText" maxlength="1000" placeholder="Tuliskan pesan atau doa untuk almarhumah..." required></textarea>
           </div>
-
           <div class="honeypot" aria-hidden="true">
             <label for="website">Jangan isi kolom ini</label>
             <input id="website" name="website" tabindex="-1" autocomplete="off">
           </div>
-
           <button class="btn" type="submit" id="sendMessageBtn">♡ &nbsp; Kirim Pesan</button>
           <p class="form-status" id="messageStatus" role="status" aria-live="polite">Menghubungkan ke buku pesan...</p>
         </form>
@@ -503,7 +232,6 @@ button:disabled{opacity:.6;cursor:not-allowed}
     <div class="wrap">
       <h2>Doa & Kehadiran</h2>
       <p class="lead">Semoga pertemuan ini menjadi jalan untuk mempererat silaturahmi dan mengirimkan doa terbaik bagi almarhumah.</p>
-
       <div class="card">
         <p class="quote">“Allahummaghfirlahaa warhamhaa wa ‘aafihaa wa’fu ‘anhaa.”</p>
         <p class="dua">Ya Allah, ampunilah beliau, rahmatilah beliau, berikanlah keselamatan kepadanya, dan maafkanlah segala kesalahannya.</p>
@@ -523,11 +251,27 @@ button:disabled{opacity:.6;cursor:not-allowed}
 </footer>
 
 <script>
-// Konfigurasi Supabase.
-// Publishable key memang ditujukan untuk penggunaan di browser.
-// Jangan gunakan service_role key atau Secret key di situs publik.
+// Saat tombol pembuka ditekan, muat video resmi dengan autoplay.
+const cover = document.getElementById('invitationCover');
+const openButton = document.getElementById('openInvitationBtn');
+const songPlayer = document.getElementById('songPlayer');
+const musicStatus = document.getElementById('musicStatus');
+
+openButton.addEventListener('click', () => {
+  cover.classList.add('is-hidden');
+  document.body.classList.remove('cover-open');
+
+  songPlayer.src =
+    'https://www.youtube-nocookie.com/embed/AQpEIZ8dNcU?autoplay=1&playsinline=1&rel=0';
+
+  musicStatus.textContent =
+    'Mencoba memutar Gala Bunga Matahari. Jika musik tidak terdengar, tekan Play di pemutar.';
+});
+
+// Supabase: gunakan publishable key melalui header apikey.
+// Jangan menaruh secret key atau service_role key di website publik.
 const SUPABASE_URL = 'https://rmucqkqsmhqtrfmezrjo.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_ZhqQZ-6vDfIk3ok-TJVIHQ_kiTCG4Md';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_ZhqQZ-6vDfIk3ok-TJVIHQ_kiTCG4Md';
 
 const messageForm = document.getElementById('messageForm');
 const messageStatus = document.getElementById('messageStatus');
@@ -537,40 +281,38 @@ const sendMessageBtn = document.getElementById('sendMessageBtn');
 const supabaseReady =
   SUPABASE_URL.startsWith('https://') &&
   SUPABASE_URL.includes('.supabase.co') &&
-  SUPABASE_ANON_KEY.length > 20 &&
-  !SUPABASE_ANON_KEY.includes('GANTI_DENGAN');
+  SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_');
 
 function prettyDate(value) {
-  const d = new Date(value);
-  return Number.isNaN(d.getTime())
+  const date = new Date(value);
+  return Number.isNaN(date.getTime())
     ? ''
-    : d.toLocaleString('id-ID', {dateStyle:'medium', timeStyle:'short'});
+    : date.toLocaleString('id-ID', {dateStyle:'medium', timeStyle:'short'});
 }
 
 async function loadMessages() {
   if (!supabaseReady) {
     messageList.textContent = 'Buku pesan belum dikonfigurasi.';
-    messageStatus.textContent = 'Perlu konfigurasi Supabase sebelum formulir dapat menerima pesan.';
+    messageStatus.textContent = 'Periksa konfigurasi Supabase.';
     sendMessageBtn.disabled = true;
     return;
   }
 
   try {
-    const res = await fetch(
+    const response = await fetch(
       `${SUPABASE_URL}/rest/v1/pesan_almarhumah?select=id,nama,pesan,created_at&order=created_at.desc&limit=100`,
       {
         headers: {
-          apikey: SUPABASE_ANON_KEY,
-          Authorization: `Bearer ${SUPABASE_ANON_KEY}`
+          apikey: SUPABASE_PUBLISHABLE_KEY
         }
       }
     );
 
-    if (!res.ok) {
-      throw new Error('Periksa tabel dan kebijakan akses Supabase.');
+    if (!response.ok) {
+      throw new Error('Periksa tabel pesan_almarhumah dan kebijakan akses Supabase.');
     }
 
-    const rows = await res.json();
+    const rows = await response.json();
     messageList.replaceChildren();
 
     if (!rows.length) {
@@ -601,9 +343,9 @@ async function loadMessages() {
     }
 
     messageStatus.textContent = 'Pesan publik dimuat.';
-  } catch (err) {
+  } catch (error) {
     messageList.textContent = 'Pesan belum bisa dimuat. Coba muat ulang halaman.';
-    messageStatus.textContent = err.message;
+    messageStatus.textContent = error.message;
   }
 }
 
@@ -625,22 +367,21 @@ messageForm.addEventListener('submit', async event => {
   messageStatus.textContent = 'Mengirim pesan...';
 
   try {
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/pesan_almarhumah`, {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/pesan_almarhumah`, {
       method: 'POST',
       headers: {
-        apikey: SUPABASE_ANON_KEY,
-        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        apikey: SUPABASE_PUBLISHABLE_KEY,
         'Content-Type': 'application/json',
         Prefer: 'return=minimal'
       },
       body: JSON.stringify({nama, pesan})
     });
 
-    if (!res.ok) {
+    if (!response.ok) {
       let detail = 'Gagal mengirim pesan. Coba lagi.';
       try {
-        const body = await res.json();
-        if (body.message) detail = body.message;
+        const result = await response.json();
+        if (result.message) detail = result.message;
       } catch {}
       throw new Error(detail);
     }
@@ -648,8 +389,8 @@ messageForm.addEventListener('submit', async event => {
     messageForm.reset();
     messageStatus.textContent = 'Terima kasih. Pesan dan doa kamu sudah dikirim.';
     await loadMessages();
-  } catch (err) {
-    messageStatus.textContent = 'Pesan belum terkirim: ' + err.message;
+  } catch (error) {
+    messageStatus.textContent = 'Pesan belum terkirim: ' + error.message;
   } finally {
     sendMessageBtn.disabled = false;
   }
@@ -657,24 +398,19 @@ messageForm.addEventListener('submit', async event => {
 
 loadMessages();
 
-// Hitung selisih tanggal kalender menuju acara, memakai waktu lokal Indonesia.
-const eventDate = new Date('2026-10-17T18:00:00+07:00');
-const today = new Date();
-const eventDay = new Date(eventDate);
-const todayDay = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-const targetDay = new Date(eventDay.getFullYear(), eventDay.getMonth(), eventDay.getDate());
-const days = Math.round((targetDay - todayDay) / (1000 * 60 * 60 * 24));
+// Hitung hari kalender hingga acara, berdasarkan waktu Indonesia/Jakarta.
+const jakartaNow = new Date(
+  new Date().toLocaleString('en-US', {timeZone:'Asia/Jakarta'})
+);
+const today = new Date(jakartaNow.getFullYear(), jakartaNow.getMonth(), jakartaNow.getDate());
+const eventDay = new Date(2026, 9, 17);
+const days = Math.round((eventDay - today) / 86400000);
 const countdown = document.getElementById('countdown');
 
-if (days > 1) {
-  countdown.textContent = `${days} hari lagi · Selesai Maghrib`;
-} else if (days === 1) {
-  countdown.textContent = 'Besok · Selesai Maghrib';
-} else if (days === 0) {
-  countdown.textContent = 'Hari ini · Selesai Maghrib';
-} else {
-  countdown.textContent = 'Terima kasih atas doa untuk almarhumah';
-}
+if (days > 1) countdown.textContent = `${days} hari lagi · Selesai Maghrib`;
+else if (days === 1) countdown.textContent = 'Besok · Selesai Maghrib';
+else if (days === 0) countdown.textContent = 'Hari ini · Selesai Maghrib';
+else countdown.textContent = 'Terima kasih atas doa untuk almarhumah';
 </script>
 </body>
 </html>
