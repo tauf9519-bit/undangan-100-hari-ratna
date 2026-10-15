@@ -7,11 +7,12 @@
 <meta name="theme-color" content="#123d32">
 <meta name="description" content="Undangan doa bersama 100 hari wafatnya Almarhumah Ratna Thalib.">
 <title>Undangan 100 Hari — Ratna Thalib</title>
+
 <style>
 :root{--green:#123d32;--green2:#1b5142;--gold:#c8a96a;--cream:#fbf7ed;--ink:#243b32;--muted:#69776d;--line:#e7dcc4}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.7}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.7}
 body.cover-open{overflow:hidden}
 button,a{font:inherit}
 .hero{min-height:100svh;background:radial-gradient(ellipse at 50% 0%,#285d4b 0%,var(--green) 62%);color:#fff8e9;display:grid;place-items:center;padding:28px 18px;position:relative;overflow:hidden;text-align:center}
@@ -54,8 +55,6 @@ button,a{font:inherit}
 .countdown{font:14px Arial,sans-serif;letter-spacing:.03em;color:#f3e7cb;margin-top:18px}
 .house-photo{display:block;width:100%;height:auto;max-height:460px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(25,55,42,.08)}
 .music-card{margin:28px auto 0;max-width:640px}
-.video-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:8px;background:#123d32}
-.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .message-form{display:grid;gap:14px;margin-top:22px}
 .field-label{display:block;font:12px Arial,sans-serif;letter-spacing:.04em;color:#53675a;margin-bottom:6px}
 .field-input,.field-textarea{display:block;width:100%;border:1px solid #d9cfb9;border-radius:2px;background:#fffefb;padding:13px 14px;font:16px/1.5 Arial,sans-serif;color:var(--ink)}
@@ -69,35 +68,22 @@ button,a{font:inherit}
 .form-status{font:13px/1.5 Arial,sans-serif;color:var(--muted);margin:0}
 .honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 button:disabled{opacity:.6;cursor:not-allowed}
-
-/* Halaman pembuka undangan */
 .invitation-cover{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow-y:auto;padding:24px;background:radial-gradient(ellipse at 50% 0%,#285d4b 0%,#123d32 72%);color:#fff8e9;text-align:center}
 .invitation-cover.is-hidden{display:none}
 .cover-inner{width:min(100%,560px);border:1px solid rgba(200,169,106,.7);padding:clamp(28px,7vw,54px) clamp(20px,6vw,42px);outline:1px solid rgba(200,169,106,.2);outline-offset:7px}
-.cover-inner .cover-arabic{font-size:clamp(27px,6vw,38px);color:#e4cb91;margin:0 0 16px}
+.cover-arabic{font-size:clamp(27px,6vw,38px);color:#e4cb91;margin:0 0 16px}
 .cover-inner h1{font-size:clamp(32px,7vw,49px);font-weight:normal;line-height:1.15;color:#fff9ed;margin:12px 0}
-.cover-inner .cover-text{color:#f2e8d1;margin:12px auto 22px;max-width:440px}
+.cover-text{color:#f2e8d1;margin:12px auto 22px;max-width:440px}
 .open-btn{margin-top:22px;min-width:210px;border-color:var(--gold);background:#c8a96a;color:#163d32;font-weight:bold}
 .open-btn:hover{background:#e4cb91;color:#123d32}
 .cover-note{font:12px/1.6 Arial,sans-serif;color:#dfd2b6;margin:18px 0 0}
-
-@media(max-width:520px){
-  .event-grid{grid-template-columns:1fr}
-  .hero-inner{padding:30px 20px}
-  .section{padding:52px 16px}
-  .btn{width:100%}
-  .actions{gap:10px}
-}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*:before,*:after{transition:none!important}
-}
+@media(max-width:520px){.event-grid{grid-template-columns:1fr}.hero-inner{padding:30px 20px}.section{padding:52px 16px}.btn{width:100%}.actions{gap:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 </style>
 </head>
 
 <body class="cover-open">
 
-<!-- HALAMAN PEMBUKA: MUSIK DICOBA DIPUTAR SAAT TOMBOL DITEKAN -->
 <div class="invitation-cover" id="invitationCover">
   <div class="cover-inner">
     <p class="cover-arabic" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
@@ -107,7 +93,7 @@ button:disabled{opacity:.6;cursor:not-allowed}
     <h1>Almarhumah<br>Ratna Thalib</h1>
     <p class="cover-text">Sabtu, 17 Oktober 2026<br>Selesai Maghrib</p>
     <button class="btn open-btn" id="openInvitationBtn" type="button">💌 Buka Undangan</button>
-    <p class="cover-note">Tekan untuk membuka undangan dan mencoba memutar musik pengiring.</p>
+    <p class="cover-note">Tekan untuk membuka undangan dan memulai musik pengiring.</p>
   </div>
 </div>
 
@@ -175,19 +161,18 @@ button:disabled{opacity:.6;cursor:not-allowed}
 
       <div class="card music-card">
         <h3 style="text-align:center;color:#123d32;font-weight:normal;font-size:22px;margin:0 0 8px">🌻 Musik Pengiring</h3>
-        <p style="text-align:center;color:#69776d;margin:0 0 20px">Gala Bunga Matahari · Sal Priadi</p>
+        <p style="text-align:center;color:#69776d;margin:0 0 18px">Gala Bunga Matahari · Sal Priadi</p>
 
-        <div class="video-frame">
-          <iframe
-            id="songPlayer"
-            src="about:blank"
-            title="Sal Priadi - Gala Bunga Matahari (Official Music Video)"
-            allow="autoplay; encrypted-media; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-          </iframe>
+        <!-- Upload file lagu.mp3 ke folder yang sama dengan index.html. -->
+        <audio id="songAudio" src="./lagu.mp3" preload="auto" loop></audio>
+
+        <div class="actions" style="margin-top:0">
+          <button class="btn secondary" id="musicToggleBtn" type="button">♫ Putar Musik</button>
         </div>
-        <p class="notice" id="musicStatus">Tekan “Buka Undangan” di halaman awal untuk mencoba memulai musik. Jika tidak terdengar, tekan Play di pemutar ini.</p>
+
+        <p class="notice" id="musicStatus" role="status" aria-live="polite">
+          Musik dicoba diputar saat tombol Buka Undangan ditekan.
+        </p>
       </div>
 
       <p class="notice">Jika titik peta kurang tepat, silakan hubungi keluarga untuk petunjuk lokasi.</p>
@@ -221,9 +206,7 @@ button:disabled{opacity:.6;cursor:not-allowed}
       <div style="margin-top:32px">
         <h2 style="font-size:clamp(23px,5vw,30px);margin-bottom:8px">Pesan dan Doa dari Keluarga</h2>
         <p class="lead" style="margin-bottom:0">Setiap pesan ditampilkan di sini setelah berhasil dikirim.</p>
-        <div class="message-list" id="messageList" aria-live="polite">
-          <p class="form-status">Memuat pesan...</p>
-        </div>
+        <div class="message-list" id="messageList" aria-live="polite"><p class="form-status">Memuat pesan...</p></div>
       </div>
     </div>
   </section>
@@ -251,25 +234,46 @@ button:disabled{opacity:.6;cursor:not-allowed}
 </footer>
 
 <script>
-// Saat tombol pembuka ditekan, muat video resmi dengan autoplay.
+// BUKA UNDANGAN DAN COBA MEMULAI MUSIK
 const cover = document.getElementById('invitationCover');
 const openButton = document.getElementById('openInvitationBtn');
-const songPlayer = document.getElementById('songPlayer');
+const songAudio = document.getElementById('songAudio');
 const musicStatus = document.getElementById('musicStatus');
+const musicToggleBtn = document.getElementById('musicToggleBtn');
 
-openButton.addEventListener('click', () => {
+async function startMusic(){
+  try{
+    await songAudio.play();
+    musicStatus.textContent = '♫ Musik sedang diputar.';
+    musicToggleBtn.textContent = 'Ⅱ Jeda Musik';
+  }catch(error){
+    musicStatus.textContent = 'Musik belum bisa diputar. Pastikan file lagu.mp3 sudah diunggah dan dapat digunakan.';
+    musicToggleBtn.textContent = '♫ Coba Putar Musik';
+  }
+}
+
+openButton.addEventListener('click',async()=>{
   cover.classList.add('is-hidden');
   document.body.classList.remove('cover-open');
-
-  songPlayer.src =
-    'https://www.youtube-nocookie.com/embed/AQpEIZ8dNcU?autoplay=1&playsinline=1&rel=0';
-
-  musicStatus.textContent =
-    'Mencoba memutar Gala Bunga Matahari. Jika musik tidak terdengar, tekan Play di pemutar.';
+  await startMusic();
 });
 
-// Supabase: gunakan publishable key melalui header apikey.
-// Jangan menaruh secret key atau service_role key di website publik.
+musicToggleBtn.addEventListener('click',async()=>{
+  if(!songAudio.paused){
+    songAudio.pause();
+    musicToggleBtn.textContent = '♫ Putar Musik';
+    musicStatus.textContent = 'Musik dijeda.';
+  }else{
+    await startMusic();
+  }
+});
+
+songAudio.addEventListener('ended',()=>{
+  musicToggleBtn.textContent = '♫ Putar Musik';
+});
+
+// KONFIGURASI SUPABASE
+// Gunakan Publishable key, jangan pernah gunakan Secret/service_role key di website.
 const SUPABASE_URL = 'https://rmucqkqsmhqtrfmezrjo.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_ZhqQZ-6vDfIk3ok-TJVIHQ_kiTCG4Md';
 
@@ -283,39 +287,38 @@ const supabaseReady =
   SUPABASE_URL.includes('.supabase.co') &&
   SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_');
 
-function prettyDate(value) {
+function prettyDate(value){
   const date = new Date(value);
   return Number.isNaN(date.getTime())
     ? ''
-    : date.toLocaleString('id-ID', {dateStyle:'medium', timeStyle:'short'});
+    : date.toLocaleString('id-ID',{dateStyle:'medium',timeStyle:'short'});
 }
 
-async function loadMessages() {
-  if (!supabaseReady) {
+async function loadMessages(){
+  if(!supabaseReady){
     messageList.textContent = 'Buku pesan belum dikonfigurasi.';
     messageStatus.textContent = 'Periksa konfigurasi Supabase.';
     sendMessageBtn.disabled = true;
     return;
   }
 
-  try {
+  try{
     const response = await fetch(
       `${SUPABASE_URL}/rest/v1/pesan_almarhumah?select=id,nama,pesan,created_at&order=created_at.desc&limit=100`,
       {
-        headers: {
-          apikey: SUPABASE_PUBLISHABLE_KEY
+        headers:{
+          apikey:SUPABASE_PUBLISHABLE_KEY,
+          Authorization:`Bearer ${SUPABASE_PUBLISHABLE_KEY}`
         }
       }
     );
 
-    if (!response.ok) {
-      throw new Error('Periksa tabel pesan_almarhumah dan kebijakan akses Supabase.');
-    }
+    if(!response.ok) throw new Error('Periksa tabel dan kebijakan akses Supabase.');
 
     const rows = await response.json();
     messageList.replaceChildren();
 
-    if (!rows.length) {
+    if(!rows.length){
       const empty = document.createElement('p');
       empty.className = 'form-status';
       empty.textContent = 'Belum ada pesan. Jadilah yang pertama mengirim doa.';
@@ -324,7 +327,7 @@ async function loadMessages() {
       return;
     }
 
-    for (const row of rows) {
+    for(const row of rows){
       const article = document.createElement('article');
       article.className = 'message-item';
 
@@ -338,27 +341,27 @@ async function loadMessages() {
       date.className = 'message-date';
       date.textContent = prettyDate(row.created_at);
 
-      article.append(heading, body, date);
+      article.append(heading,body,date);
       messageList.appendChild(article);
     }
 
     messageStatus.textContent = 'Pesan publik dimuat.';
-  } catch (error) {
+  }catch(error){
     messageList.textContent = 'Pesan belum bisa dimuat. Coba muat ulang halaman.';
     messageStatus.textContent = error.message;
   }
 }
 
-messageForm.addEventListener('submit', async event => {
+messageForm.addEventListener('submit',async event=>{
   event.preventDefault();
 
-  if (document.getElementById('website').value) return;
-  if (!supabaseReady) return;
+  if(document.getElementById('website').value) return;
+  if(!supabaseReady) return;
 
   const nama = document.getElementById('senderName').value.trim();
   const pesan = document.getElementById('messageText').value.trim();
 
-  if (!nama || !pesan) {
+  if(!nama || !pesan){
     messageStatus.textContent = 'Nama dan pesan wajib diisi.';
     return;
   }
@@ -366,50 +369,49 @@ messageForm.addEventListener('submit', async event => {
   sendMessageBtn.disabled = true;
   messageStatus.textContent = 'Mengirim pesan...';
 
-  try {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/pesan_almarhumah`, {
-      method: 'POST',
-      headers: {
-        apikey: SUPABASE_PUBLISHABLE_KEY,
-        'Content-Type': 'application/json',
-        Prefer: 'return=minimal'
+  try{
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/pesan_almarhumah`,{
+      method:'POST',
+      headers:{
+        apikey:SUPABASE_PUBLISHABLE_KEY,
+        Authorization:`Bearer ${SUPABASE_PUBLISHABLE_KEY}`,
+        'Content-Type':'application/json',
+        Prefer:'return=minimal'
       },
-      body: JSON.stringify({nama, pesan})
+      body:JSON.stringify({nama,pesan})
     });
 
-    if (!response.ok) {
+    if(!response.ok){
       let detail = 'Gagal mengirim pesan. Coba lagi.';
-      try {
+      try{
         const result = await response.json();
-        if (result.message) detail = result.message;
-      } catch {}
+        if(result.message) detail = result.message;
+      }catch{}
       throw new Error(detail);
     }
 
     messageForm.reset();
     messageStatus.textContent = 'Terima kasih. Pesan dan doa kamu sudah dikirim.';
     await loadMessages();
-  } catch (error) {
+  }catch(error){
     messageStatus.textContent = 'Pesan belum terkirim: ' + error.message;
-  } finally {
+  }finally{
     sendMessageBtn.disabled = false;
   }
 });
 
 loadMessages();
 
-// Hitung hari kalender hingga acara, berdasarkan waktu Indonesia/Jakarta.
-const jakartaNow = new Date(
-  new Date().toLocaleString('en-US', {timeZone:'Asia/Jakarta'})
-);
-const today = new Date(jakartaNow.getFullYear(), jakartaNow.getMonth(), jakartaNow.getDate());
-const eventDay = new Date(2026, 9, 17);
-const days = Math.round((eventDay - today) / 86400000);
+// HITUNG HARI MENUJU ACARA BERDASARKAN TANGGAL DI INDONESIA
+const jakartaNow = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Jakarta'}));
+const today = new Date(jakartaNow.getFullYear(),jakartaNow.getMonth(),jakartaNow.getDate());
+const eventDay = new Date(2026,9,17);
+const days = Math.round((eventDay-today)/86400000);
 const countdown = document.getElementById('countdown');
 
-if (days > 1) countdown.textContent = `${days} hari lagi · Selesai Maghrib`;
-else if (days === 1) countdown.textContent = 'Besok · Selesai Maghrib';
-else if (days === 0) countdown.textContent = 'Hari ini · Selesai Maghrib';
+if(days>1) countdown.textContent = `${days} hari lagi · Selesai Maghrib`;
+else if(days===1) countdown.textContent = 'Besok · Selesai Maghrib';
+else if(days===0) countdown.textContent = 'Hari ini · Selesai Maghrib';
 else countdown.textContent = 'Terima kasih atas doa untuk almarhumah';
 </script>
 </body>
