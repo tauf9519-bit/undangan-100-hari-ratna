@@ -7,7 +7,6 @@
 <meta name="theme-color" content="#123d32">
 <meta name="description" content="Undangan doa bersama 100 hari wafatnya Almarhumah Ratna Thalib.">
 <title>Undangan 100 Hari — Ratna Thalib</title>
-
 <style>
 :root{--green:#123d32;--green2:#1b5142;--gold:#c8a96a;--cream:#fbf7ed;--ink:#243b32;--muted:#69776d;--line:#e7dcc4}
 *{box-sizing:border-box}
@@ -51,9 +50,8 @@ audio{display:none}
 .footer small{display:block;margin-top:20px;color:#c6c7b5;font:11px Arial,sans-serif;letter-spacing:.04em}
 .countdown{font:14px Arial,sans-serif;letter-spacing:.03em;color:#f3e7cb;margin-top:18px}
 .house-photo{display:block;width:100%;height:auto;max-height:460px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(25,55,42,.08)}
-.memorial-photo{max-width:320px;margin:22px auto 14px;text-align:center}
+.memorial-photo{display:none;max-width:320px;margin:22px auto 14px;text-align:center}
 .memorial-photo img{display:block;width:100%;max-height:420px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px}
-.memorial-photo[hidden]{display:none}
 .message-form{display:grid;gap:14px;margin-top:22px}
 .field-label{display:block;font:12px Arial,sans-serif;letter-spacing:.04em;color:#53675a;margin-bottom:6px}
 .field-input,.field-textarea{display:block;width:100%;border:1px solid #d9cfb9;border-radius:2px;background:#fffefb;padding:13px 14px;font:16px/1.5 Arial,sans-serif;color:var(--ink)}
@@ -66,7 +64,6 @@ audio{display:none}
 .message-date{display:block;margin-top:10px;color:var(--muted);font:11px Arial,sans-serif}
 .form-status{font:13px/1.5 Arial,sans-serif;color:var(--muted);margin:0}
 .honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
-button:disabled{opacity:.6;cursor:not-allowed}
 @media(max-width:520px){.event-grid{grid-template-columns:1fr}.hero-inner{padding:30px 20px}.section{padding:52px 16px}.btn{width:100%}.actions{gap:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 </style>
@@ -74,7 +71,7 @@ button:disabled{opacity:.6;cursor:not-allowed}
 
 <body>
 
-<!-- Audio memakai nama file persis seperti yang ada di repository. -->
+<!-- Musik otomatis: browser HP mungkin tetap membatasi autoplay. -->
 <audio id="bgMusic" src="./Gala%20bunga%20matahari_spotdown.org.mp3" autoplay loop preload="auto" playsinline></audio>
 
 <header class="hero" id="atas">
@@ -96,15 +93,13 @@ button:disabled{opacity:.6;cursor:not-allowed}
     <div class="wrap">
       <h2>Assalamu’alaikum warahmatullahi wabarakatuh</h2>
       <p class="lead">Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud mengadakan doa bersama dan tahlil untuk mengenang 100 hari wafatnya:</p>
-
       <div class="card">
         <p class="quote">“Setiap doa yang tulus menjadi pengingat akan kasih sayang yang tetap hidup dalam kenangan.”</p>
         <div class="ornament">❋</div>
         <p class="smallcaps">Almarhumah</p>
         <p class="name">Ratna Thalib</p>
 
-        <!-- Bagian foto otomatis disembunyikan jika file fotonya belum diunggah. -->
-        <figure class="memorial-photo" id="memorialPhotoWrap" hidden>
+        <figure class="memorial-photo" id="memorialPhotoWrap">
           <img id="memorialPhoto" src="./foto-almarhumah.jpg" alt="Foto kenangan Almarhumah Ratna Thalib" loading="lazy">
           <figcaption class="notice">Mengenang dengan penuh kasih, Almarhumah Ratna Thalib 🤍</figcaption>
         </figure>
@@ -146,7 +141,7 @@ button:disabled{opacity:.6;cursor:not-allowed}
       <div class="actions">
         <a class="btn" href="https://maps.app.goo.gl/zXQm5Xz3GF5SaJ1G8?g_st=ic" target="_blank" rel="noopener noreferrer">⌖ &nbsp; Buka Google Maps</a>
       </div>
-      <p class="notice">Musik pengiring dicoba diputar otomatis. Jika browser memblokir suara otomatis, pemutaran mungkin baru dimulai setelah pengunjung berinteraksi dengan halaman.</p>
+      <p class="notice">Musik pengiring dicoba diputar otomatis. Browser HP mungkin membatasi suara otomatis.</p>
     </div>
   </section>
 
@@ -207,8 +202,7 @@ button:disabled{opacity:.6;cursor:not-allowed}
 </footer>
 
 <script>
-// Autoplay dicoba saat halaman dibuka dan saat pengunjung pertama kali berinteraksi.
-// Browser HP dapat tetap memblokir suara otomatis.
+// Coba autoplay tanpa video/tombol musik. Browser bisa tetap memblokir audio.
 const bgMusic = document.getElementById('bgMusic');
 
 async function tryStartMusic() {
@@ -216,7 +210,7 @@ async function tryStartMusic() {
   try {
     await bgMusic.play();
   } catch (error) {
-    // Tidak menampilkan tombol musik tambahan.
+    // Browser mungkin memerlukan interaksi pengunjung sebelum memutar suara.
   }
 }
 
@@ -225,19 +219,17 @@ bgMusic.addEventListener('canplay', tryStartMusic);
 document.addEventListener('pointerdown', tryStartMusic, true);
 document.addEventListener('keydown', tryStartMusic, true);
 
-// Tampilkan foto almarhumah jika file foto-almarhumah.jpg tersedia.
+// Tampilkan foto almarhumah hanya jika file fotonya tersedia.
 const memorialPhoto = document.getElementById('memorialPhoto');
 const memorialPhotoWrap = document.getElementById('memorialPhotoWrap');
-
 memorialPhoto.addEventListener('load', () => {
-  memorialPhotoWrap.hidden = false;
+  memorialPhotoWrap.style.display = 'block';
 });
 memorialPhoto.addEventListener('error', () => {
-  memorialPhotoWrap.hidden = true;
+  memorialPhotoWrap.style.display = 'none';
 });
 
-// Supabase: publishable key dikirim melalui header apikey.
-// Jangan gunakan Secret key atau service_role key di situs publik.
+// Konfigurasi Supabase menggunakan publishable key.
 const SUPABASE_URL = 'https://rmucqkqsmhqtrfmezrjo.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_ZhqQZ-6vDfIk3ok-TJVIHQ_kiTCG4Md';
 
@@ -272,9 +264,7 @@ async function loadMessages() {
       {headers:{apikey:SUPABASE_PUBLISHABLE_KEY}}
     );
 
-    if (!response.ok) {
-      throw new Error('Periksa tabel pesan_almarhumah dan kebijakan akses Supabase.');
-    }
+    if (!response.ok) throw new Error('Periksa tabel dan kebijakan akses Supabase.');
 
     const rows = await response.json();
     messageList.replaceChildren();
@@ -315,7 +305,6 @@ async function loadMessages() {
 
 messageForm.addEventListener('submit', async event => {
   event.preventDefault();
-
   if (document.getElementById('website').value || !supabaseReady) return;
 
   const nama = document.getElementById('senderName').value.trim();
@@ -361,23 +350,38 @@ messageForm.addEventListener('submit', async event => {
 
 loadMessages();
 
-// Hitung hari berdasarkan tanggal Indonesia/Jakarta.
-const jakartaNow = new Date(
-  new Date().toLocaleString('en-US', {timeZone:'Asia/Jakarta'})
-);
-const today = new Date(
-  jakartaNow.getFullYear(),
-  jakartaNow.getMonth(),
-  jakartaNow.getDate()
-);
-const eventDay = new Date(2026, 9, 16);
-const days = Math.round((eventDay - today) / 86400000);
+// Hitung hari berdasarkan tanggal kalender WIB, bukan jam menuju waktu acara.
+// Ini mencegah tulisan "2 hari lagi" ketika tanggal lokal sebenarnya sudah 16 Oktober.
+function getJakartaDateParts() {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone:'Asia/Jakarta',
+    year:'numeric',
+    month:'numeric',
+    day:'numeric'
+  }).formatToParts(new Date());
+
+  const result = {};
+  for (const part of parts) {
+    if (part.type !== 'literal') result[part.type] = Number(part.value);
+  }
+  return result;
+}
+
+const jakartaDate = getJakartaDateParts();
+const todayUTC = Date.UTC(jakartaDate.year, jakartaDate.month - 1, jakartaDate.day);
+const eventUTC = Date.UTC(2026, 9, 16);
+const days = Math.round((eventUTC - todayUTC) / 86400000);
 const countdown = document.getElementById('countdown');
 
-if (days > 1) countdown.textContent = `${days} hari lagi · Selesai Maghrib`;
-else if (days === 1) countdown.textContent = 'Besok · Selesai Maghrib';
-else if (days === 0) countdown.textContent = 'Hari ini · Selesai Maghrib';
-else countdown.textContent = 'Terima kasih atas doa untuk almarhumah';
+if (days > 1) {
+  countdown.textContent = `${days} hari lagi · Selesai Maghrib`;
+} else if (days === 1) {
+  countdown.textContent = 'Besok · Selesai Maghrib';
+} else if (days === 0) {
+  countdown.textContent = 'Hari ini · Selesai Maghrib';
+} else {
+  countdown.textContent = 'Terima kasih atas doa untuk almarhumah';
+}
 </script>
 </body>
 </html>
